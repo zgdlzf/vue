@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script type="text/javascript">
-        function myClk(){
-            alter("hello world!");
-            onload
-        }
-    </script>
+    <script src="./vue.js"></script>
 </head>
 <body>
-    <input type="button" value="我是一个按钮" onclick="myClk()">
-    <input type="button" value="我是另一个按钮" id="btn">
+    <div>
+        <h1 v-text="name"></h1>
+        <div>
+            现在是{{Year}}年{{Month}}月
+        </div>
+        <a v-bind:href="hrefValue" class="" v-html="msg"></a>
+        <div v-on:mouseenter="visible" v-on:mouseleave="invisible">
+            时间如流水
+            <span v-show="seen">那你还在等什么</span>
+        </div>
+        <input type="text" v-model="txt">
+        <ul>
+            <li v-for="singer in singers">{{singer.no}} {{singer.name}}</li>
+        </ul>
+    </div>
+
+    <script>
+        var app=new Vue(
+            
+        )
+    </script>
 </body>
 </html>
