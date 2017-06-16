@@ -1,0 +1,15 @@
+*{
+    padding:0px;margin:0px;
+}
+ul{
+    width:200px;
+    margin:100px auto;
+    boder:5px #000;
+}
+li{
+    height:30px;
+    
+    background:#575757;
+    cursor:pointer;
+    list-style-type:none;
+}
