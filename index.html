@@ -8,7 +8,7 @@
     <script src="./vue.js"></script>
 </head>
 <body>
-    <div>
+    <div id="demo">
         <h1 v-text="name"></h1>
         <div>
             现在是{{Year}}年{{Month}}月
@@ -25,9 +25,25 @@
     </div>
 
     <script>
-        var app=new Vue(
-            
-        )
+        var app=new Vue({
+            el:'#demo',
+            data:{
+                name:'Hrsan',
+                Year:new Date().getFullYear(),
+                Month:new Date().getMonth(),
+                hrefValue:'./images/1.png',
+                msg:'<img src="./images/2.png" alt="2">',
+                seen:false
+            },
+            methods:{
+                visible:function(){
+                    this.seen=true
+                },
+                invisible:function(){
+                    this.seen=false
+                }
+            }
+        })
     </script>
 </body>
 </html>
